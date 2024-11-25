@@ -46,7 +46,7 @@
     <header class="header_in">
         <div class="container">
             <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 bg-white  box-shadow">
-                <h5 class="my-0 mr-md-auto font-weight-normal"><a href="index.html"><img src="img/lawsuit-logo-01.png" alt="Logo" width="220" height="80" class="d-none d-md-block"><img src="img/lawsuit-logo-01.png" alt="Logo" width="220" height="80" class="d-block d-md-none"></a></h5>
+                <h5 class="my-0 mr-md-auto font-weight-normal"><a href="index2.html"><img src="img/lawsuit-logo-01.png" alt="Logo" width="220" height="80" class="d-none d-md-block"><img src="img/lawsuit-logo-01.png" alt="Logo" width="220" height="80" class="d-block d-md-none"></a></h5>
                 <nav class="my-2 my-md-0 mr-md-3">
                     <a class="p-2 text-dark btn " href="#get_started" title="Get Started">Get Started</a>
                     <a class="p-2 text-dark btn " href="#background_info" title="Background Info">Background Info</a>
@@ -59,12 +59,12 @@
         <!-- /container -->
     </header>
 
-    <section class="parallax_window_in" data-parallax="scroll" data-image-src="img/banner.jpg" data-natural-width="1280" data-natural-height="768">
+    <!--<section class="parallax_window_in" data-parallax="scroll" data-image-src="img/banner.jpg" data-natural-width="1280" data-natural-height="768">
         <div id="sub_content_in">
             <h1>Depo-Provera Lawsuit – Seek Justice for Your Injuries</h1>
             <p>Have you experienced serious health issues after using Depo-Provera? You may be entitled to compensation. Act now to protect your rights. Get a free case evaluation today—no fees unless you win!</p>
         </div>
-    </section>
+    </section>-->
     <!-- /section -->
 
 	<div class="container">
@@ -87,181 +87,58 @@
                         <span id="location"></span>
                     </div>
                     <!-- /top-wizard -->
-                    <form id="wrapped" method="post">
-                        <input id="website" name="website" type="text" value="">
-                        <!-- Leave for security protection, read docs for details -->
-                        <div id="middle-wizard">
-
-                            <div class="step">
-                                <h3 class="main_question"><i class="arrow_right"></i>Is the person who was exposed to DEPO PROVERA you or a loved one? (If there are multiple family members exposed, please come back and complete the questions for each family member)</h3>
-                                <div class="row">
-                                    <div class="col-lg-6">
-                                        <div class="form-group">
-                                            <label class="container_check version_2">Myself
-                                                <input type="radio" name="any_person" value="Myself" checked>
-                                                <span class="checkmark"></span>
-                                            </label>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="container_check version_2">Loved one
-                                                <input type="radio" name="any_person" value="Loved one">
-                                                <span class="checkmark"></span>
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- /row -->
-                            </div>
-                            <!-- /step-->
-
-                            <div class="step">
-                                <h3 class="main_question"><i class="arrow_right"></i>Did the affected individual spray DEPO-PROVERA (or was he/she sprayed with DEPO-PROVERA)?</h3>
-                                <div class="row">
-                                    <div class="col-lg-6">
-                                        <div class="form-group">
-                                            <label class="container_check version_2">They Sprayed It
-                                                <input type="radio" name="affected_individual" value="They Sprayed It" checked>
-                                                <span class="checkmark"></span>
-                                            </label>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="container_check version_2">They Were Sprayed
-                                                <input type="radio" name="affected_individual" value="They Were Sprayed">
-                                                <span class="checkmark"></span>
-                                            </label>
-                                        </div>
-                                    </div>
+                    <form method="post">
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6">
+                                <div class="form-group">
+                                    <label for="name_contact">First Name</label>
+                                    <input type="text" class="form-control required" placeholder="First Name *" id="name_contact" required name="name_contact">
                                 </div>
                             </div>
-                            <!-- /step-->
-
-                            <!-- /Start Branch ============================== -->
-                            <div class="step">
-                                <label class="custom add_top_10"></label>
-                                <h3 class="main_question"><i class="arrow_right"></i>What occupation did the affected have when exposed?</h3>
+                            <div class="col-md-6 col-sm-6">
                                 <div class="form-group">
-                                    <input type="text" name="occupation" id="occupation" class="form-control required">
+                                    <label for="lastname_contact">Last Name</label>
+                                    <input type="text" class="form-control" placeholder="Last Name *" id="lastname_contact" required name="lastname_contact">
                                 </div>
                             </div>
-
-                            <div class="step">
-                                <h3 class="main_question"><i class="arrow_right"></i>Please select the place where Depo-Provera primarily used.</h3>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6">
                                 <div class="form-group">
-                                    <select name="place" required class="form-control">
-                                        <option value="">Select</option>
-                                        <option value="At Work">At Work</option>
-                                        <option value="At Home">At Home</option>
-                                        <option value="Somewhere Else">Somewhere Else</option>
-                                    </select>
+                                    <label for="phone_contact">Phone number</label>
+                                    <input type="text" id="phone_contact" placeholder="Phone number *" maxlength="10" required onkeypress="return isNumber(event)" name="phone_contact" class="form-control">
                                 </div>
                             </div>
-
-                            <div class="step">
-                                <h3 class="main_question"><i class="arrow_right"></i>Have any of the following been diagnosed?</h3>
+                            <div class="col-md-6 col-sm-6">
                                 <div class="form-group">
-                                    <select name="place" required class="form-control">
-                                        <option value="">--Select Diagnosis--</option>
-                                        <option value="Non-Hodgkin's lymphona">Non-Hodgkin's lymphona</option>
-                                        <option value="B-cell lymphoma">B-cell lymphoma</option>
-                                        <option value="T-cell lymphoma">T-cell lymphoma</option>
-                                        <option value="Follicular lymphoma">Follicular lymphoma</option>
-                                        <option value="Chronic lymphocytic leukemia">Chronic lymphocytic leukemia</option>
-                                        <option value="Small lymphocytic lymphoma">Small lymphocytic lymphoma</option>
-                                        <option value="Mantle cell lymphoma">Mantle cell lymphoma</option>
-                                        <option value="Diffuse large B-cell lymphoma">Diffuse large B-cell lymphoma</option>
-                                        <option value="Primary central nervous system (CNS) lymphoma">Primary central nervous system (CNS) lymphoma</option>
-                                    </select>
+                                    <label for="email_contact">Email</label>
+                                    <input type="email" id="email_contact" placeholder="Email *" required name="email_contact" class="form-control">
                                 </div>
                             </div>
-
-                            <div class="step">
-                                <h3 class="main_question"><i class="arrow_right"></i>Please enter the date of the diagnosis.</h3>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
                                 <div class="form-group">
-                                    <input type="text" name="diagnosisdate" ata-date-format="mm/dd/yyyy" id="diagnosisdate" min="1930-01-01" class="form-control required">
+                                    <label for="message_contact">Your message</label>
+                                    <textarea rows="5" id="message_contact" placeholder="Your message" name="message_contact" class="form-control" style="height:100px;"></textarea>
                                 </div>
                             </div>
-
-                            <div class="step">
-                                <h3 class="main_question"><i class="arrow_right"></i>Please enter your date of birth.</h3>
-                                <div class="form-group">
-                                    <input type="text" name="date_of_birth" ata-date-format="mm/dd/yyyy" id="date_of_birth" min="1930-01-01" class="form-control required">
-                                </div>
-                            </div>
-                            <!-- /step-->
-
-                            <div class="step">
-                                <h3 class="main_question"><i class="arrow_right"></i>Would you like to add any additional information that will help us determine if the case qualifies for compensation?</h3>
-                                <div class="form-group">
-                                    <label class="container_radio version_2">Yes
-                                        <input type="radio" name="additional_information" value="Yes" class="required">
-                                        <span class="checkmark"></span>
-                                    </label>
-                                    <label class="container_radio version_2">No
-                                        <input type="radio" name="additional_information" value="No" class="required">
-                                        <span class="checkmark"></span>
-                                    </label>
-                                </div>
-                            </div>
-                            <!-- /step-->
-
-                            <div class="step">
-                                <h3 class="main_question"><i class="arrow_right"></i>Please add any additional information that will help us determine if you qualify.</h3>
-                                <div class="form-group">
-                                    <textarea class="form-control" name="additional_information_details" id="additional_information_details"></textarea>
-                                </div>
-                            </div>
-
-                            <div class="step">
-                                <h3 class="main_question"><i class="arrow_right"></i>Are you working with another law firm in regard to Depo-Provera?</h3>
-                                <div class="form-group">
-                                    <label class="container_radio version_2">Yes
-                                        <input type="radio" name="any_other_law_firm" value="Yes" class="required">
-                                        <span class="checkmark"></span>
-                                    </label>
-                                    <label class="container_radio version_2">No
-                                        <input type="radio" name="any_other_law_firm" value="No" class="required">
-                                        <span class="checkmark"></span>
-                                    </label>
-                                </div>
-                            </div>
-                            <!-- /step-->
-
-                            <div class="submit step" id="end">
-                                <h3 class="main_question"><i class="arrow_right"></i>Please fill with your personal data</h3>
-                                <div class="form-group add_top_30">
-                                    <label for="first_name">First Name</label>
-                                    <input type="text" name="first_name" id="first_name" class="form-control required">
-                                </div>
-                                <div class="form-group add_top_30">
-                                    <label for="last_name">Last Name</label>
-                                    <input type="text" name="last_name" id="last_name" class="form-control required">
-                                </div>
-                                <div class="form-group">
-                                    <label for="email">Email Address</label>
-                                    <input type="email" name="email" id="email" class="form-control required">
-                                </div>
-                                <div class="form-group">
-                                    <label for="phone">Phone</label>
-                                    <input type="text" name="phone" id="phone" class="form-control required">
-                                </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
                                 <div class="form-group">
                                     <label class="container_check">By checking this box and clicking “SUBMIT CLAIM REVIEW” I represent that I am the line subscriber or primary user of the phone number above (including my wireless number if provided) and provide my express consent authorizing PLM, Michaels &amp; Sterling and our marketing partners to contact me by telephone (including text messages), delivered via automated technology to the phone number above regarding legal products and/or offerings even if I am on a Federal, State or Do-Not-Call registry. I understand that these calls/texts may be delivered via automated technology, at any time in any way, including but not limited to telemarketing calls using an auto-dialer, text, fax, or email, even if these result in charges by my carrier. I further represent that I am a U.S. Resident over the age of 18, understand and agree to the <a href="https://depolawsuitnow.com/privacy-policy">Privacy Policy</a>, <a href="https://depolawsuitnow.com/terms-conditions/">Terms &amp; Conditions</a>, and <a href="https://depolawsuitnow.com/CCPA">California Privacy Notice</a> and agree to receive email promotions from PLM, Michaels  &amp; Sterling LLC and our marketing partners. I understand and agree that this site uses third-party visit recording technology, including, but not limited to, Trusted Form and Jornaya. I understand that my consent is not required to continue with my application or is a condition to search for legal products and/offerings. I understand I can revoke consent at any time.
                                         <input type="checkbox" name="accept_terms" value="Yes" required>
                                         <span class="checkmark"></span>
                                     </label>
                                 </div>
-                                <!-- /row-->
                             </div>
-                            <!-- /step last-->
-
                         </div>
-                        <!-- /middle-wizard -->
-                        <div id="bottom-wizard">
-                            <button type="button" name="backward" class="backward">Prev</button>
-                            <button type="button" name="forward" class="forward">Next</button>
-                            <button type="submit" name="process" class="submit" value="Submit">Submit</button>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p><input type="submit" value="Submit" class="btn_1 add_bottom_15" id="submit-contact"></p>
+                            </div>
                         </div>
-                        <!-- /bottom-wizard -->
                     </form>
                 </div>
                 <!-- /Wizard container -->
@@ -461,6 +338,7 @@
             maxDateNow: true,
             format: 'mm/dd/yyyy',
         });
+        function isNumber(e){var a=e.which?e.which:e.keyCode;return 46==a||!(a>31)||!(a<48)&&!(a>57)}
     </script>
 
 
