@@ -45,7 +45,7 @@ class PageController extends Controller
         $service = new Google_Service_Sheets($client);
 
         // Google Sheet ID and range
-        $spreadsheetId = '1vb4a0iIQSORd2ImjoVopW3ksbyQc0Z4wsPMSrTxEXPo'; // Replace with your Google Sheet ID
+        $spreadsheetId = config('settings.sheet_id'); // Replace with your Google Sheet ID
         $range = 'Sheet1'; // Replace 'Sheet1' with the name of your sheet
 
         // Prepare data to append (mapping to your column headings)
