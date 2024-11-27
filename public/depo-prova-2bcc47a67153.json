@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "depo-prova",
+  "private_key_id": "2bcc47a6715355436aebb7282ebc130c048b16a0",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC5fynyzzKdrvsE\nnaYPioW5mM/+JIpwqr/dKDqD0VRGzyE/UVQfThaNgBUPoOQ/AbcoUkfB/appd4Am\nwNwJVOGZuCE1YKJhfMAkAhWTrIgV0P+2O6Lbi/ie897MLwb1D+MRVVmz7DyZ1BsQ\nDlqW9YidyAhfqXMbIRkvunwLlmpuTLqy+BCf00oJDVFYfWKZUKUg0h4ScHofAmkU\nNkNlvdGRInr1KOjmmfvUUVFHWJmSFGvL2RW2j5EKjz6r7hH73Y3E0IOjQH6rzNqZ\nwwV8EgIkYaFMZo0HQbCdHpOzW3K0PXoFXB2TZBDFXw8FUC+1vo5YowckfyrzmHhY\nDXXyKltfAgMBAAECggEAHBsidgHi/3Vl31srsCsi++4lhbJvr4aPr6jKxPJQvLHh\nrcBa6KtiS2pexpFwRAO0hs2AxenziitrJXQPYvKThEEb9wR/Vhoa2tnd/xQjQnr6\nY9hBYtaggyUcWv+9JCCWHSg7gUGIJR64QwSJwVnOq2mFq0j3geLP+CVfajoOQkvn\nheAN4A+h9TVHOPAEEGr6yco+sjbq8KsmlVTlsH+Mm1XV2I9HLV2jrK2AfCQM1Rdo\njUGbtx5X9y5RCxCzxTBHhmgGxivX/Z4B5/zWIZAQSu2lq7g8HrW21k1wFSOXkoKy\nUS+VFf1N+c8PvSQIBydzU/NdbtB06DrR53Mv8/J9wQKBgQDzSVQfrxF7igDOBNB2\nGd7mJnaMP5GlYT6Av0faWediG7RKn7TFS7B5oJrKqqmwnypiNHpfJSLhKTLcF0o0\nR5uONe5YQSYmKUdxD5OgQrEUps03P3UBqIzGhi2t4fDGrhMHKMZxzL6KLVovNB3v\n8sfWAIhCZgm7aws3qJQA3ml9LwKBgQDDMLpgaYaC1bDgzR8AmGypdQvK1pfAE3UJ\n4q+H/5X0q1oMsezMZiTueMY40Nle/nUodYq4nJycWdn7Ue1EapNyNkMForFdD6S4\n1zKxNvNC5sP9UywExYYBcj+R3KpU1PhCMPDgEd0pMDM9PYgek8yH5G9/wDbzdcpm\nhjKTkm1Y0QKBgQCCW4xD3d6UP4Hm4hWA8qPI1ls3EujLoKuI+PVbPkkI/KdCRQjr\nnn7U7QWECqYaCW8AZ/YZ/SAPXa/u1lvgX24uaR9pEp+KWxv4rMwBVzrjQe076Tic\nxt+HkGXxgdst2iA/+c07NOXzzBFCsb5Iz+Hb/TUFvv7/+X9tN1r2jDYh6QKBgQCc\ng4s/Wf6hFMbTS8drS83+B7vf9zkRrMhxl9LWw4wz996qRVWzBMjia/fOgTF8KaA6\nRB5rMDGocagIDUarUKZQs9AESdPc4nlcOjsMvRpM8AwCKtomLVjp+fmddYsjoO48\n7U+I7OohZ+P+XEO0+SDNatA5aSDnEfGtSjht+sExsQKBgFT/n8Xu7bCqcEbwZN5t\nSnqCgFyFEuVaHcq6pZvbbyi3XOJhIXYGYmqeyYax4zQKt9PmqgozWlUgExvfK5Io\nNaEPjS1RPDTWdi2V/uzDR6uyOTFaruwmfE4U0WqtapwW6qtdMY5AmLOASxRaLuCR\nLIpz2HymjgAJOEOV6RBA35lY\n-----END PRIVATE KEY-----\n",
+  "client_email": "google-sheet@depo-prova.iam.gserviceaccount.com",
+  "client_id": "108462449430782051937",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/google-sheet%40depo-prova.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
