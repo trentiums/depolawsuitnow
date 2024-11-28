@@ -110,24 +110,24 @@
                     </form> --}}
                    {{-- {{ dd(urlencode(route('store-inquiry')))}} --}}
                     <iframe
-  src="https://link.streamlinesystems.io/widget/form/324Ox4FOhxANvjel9LAI"
-  style="width:100%;height:100%;border:none;border-radius:3px"
-  id="inline-324Ox4FOhxANvjel9LAI"
-  data-layout="{'id':'INLINE'}"
-  data-trigger-type="alwaysShow"
-  data-trigger-value=""
-  data-activation-type="alwaysActivated"
-  data-activation-value=""
-  data-deactivation-type="neverDeactivate"
-  data-deactivation-value=""
-  data-form-name="Depo Lead Form"
-  data-height="1072"
-  data-layout-iframe-id="inline-324Ox4FOhxANvjel9LAI"
-  data-form-id="324Ox4FOhxANvjel9LAI"
-  title="Depo Lead Form"
-      >
-</iframe>
-<script src="https://link.streamlinesystems.io/js/form_embed.js"></script>
+                        src="https://link.streamlinesystems.io/widget/form/324Ox4FOhxANvjel9LAI"
+                        style="width:100%;height:100%;border:none;border-radius:3px"
+                        id="inline-324Ox4FOhxANvjel9LAI"
+                        data-layout="{'id':'INLINE'}"
+                        data-trigger-type="alwaysShow"
+                        data-trigger-value=""
+                        data-activation-type="alwaysActivated"
+                        data-activation-value=""
+                        data-deactivation-type="neverDeactivate"
+                        data-deactivation-value=""
+                        data-form-name="Depo Lead Form"
+                        data-height="1070"
+                        data-layout-iframe-id="inline-324Ox4FOhxANvjel9LAI"
+                        data-form-id="324Ox4FOhxANvjel9LAI"
+                        title="Depo Lead Form"
+                    >
+                    </iframe>
+                    <script src="https://link.streamlinesystems.io/js/form_embed.js"></script>
                 </div>
                 <!-- /Wizard container -->
             </div>
