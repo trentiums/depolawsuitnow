@@ -73,7 +73,7 @@
                                             By checking this box and clicking “SUBMIT CLAIM REVIEW” I represent that I
                                             am the line subscriber or primary user of the phone number above (including
                                             my wireless number if provided) and provide my express consent authorizing
-                                            PLM, Michaels & Sterling,Prime Marketing Source and our marketing partners to contact me by
+                                            PLM, Michaels & Sterling, Prime Marketing Source and our marketing partners to contact me by
                                             telephone (including text messages), delivered via automated technology to
                                             the phone number above regarding legal products and/or offerings even if I
                                             am on a Federal, State or Do-Not-Call registry. I understand that these
