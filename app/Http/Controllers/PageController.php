@@ -31,6 +31,13 @@ class PageController extends Controller
         return view('privacy-and-policy');
     }
 
+    public function depoPrivacyRights()
+    {
+        $data['meta_title'] = 'Your Privacy Rights | Depo Lawsuit Now – Confidential Legal Support';
+        $data['meta_description'] = 'Understand how Depo Lawsuit Now protects your personal information when pursuing a claim. We prioritize confidentiality, secure data handling, and your right to privacy throughout the legal process.';
+        return view('depo-privacy-rights');
+    }
+
     public function storeInquiry(InquiryRequest $request)
     {
         $client = new Google_Client();

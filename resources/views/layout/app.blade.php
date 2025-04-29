@@ -80,6 +80,7 @@
             <ul>
                 <li><a href="{{route('privacy-policy')}}" class="animated_link">Privacy Policy</a></li>
                 <li><a href="{{route('terms-condition')}}" class="animated_link">Terms & Conditions</a></li>
+                <li><a href="{{route('depo-privacy-rights')}}" class="animated_link">Depo Privacy Rights</a></li>
             </ul>
         </footer>
         <!-- end footer-->
