@@ -25,7 +25,7 @@
                             <span id="location"></span>
                         </div>
                         <!-- /top-wizard -->
-                        {{--<form method="post" action="{{ route('store-inquiry') }}" id="inquiry-form"
+                        <form method="post" action="{{ route('store-inquiry') }}" id="inquiry-form"
                               data-tf-element-role="offer">
                             @csrf
                             <div class="row">
@@ -105,9 +105,9 @@
                                               id="submit-contact"></p>
                                 </div>
                             </div>
-                        </form>--}}
+                        </form>
                         {{-- {{ dd(urlencode(route('store-inquiry')))}} --}}
-                        <iframe
+                        {{--<iframe
                             src="https://link.streamlinesystems.io/widget/form/324Ox4FOhxANvjel9LAI"
                             style="width:100%;height:100%;border:none;border-radius:3px"
                             id="inline-324Ox4FOhxANvjel9LAI"
@@ -125,7 +125,7 @@
                             title="Depo Lead Form"
                         >
                         </iframe>
-                        <script src="https://link.streamlinesystems.io/js/form_embed.js"></script>
+                        <script src="https://link.streamlinesystems.io/js/form_embed.js"></script>--}}
                     </div>
                     <!-- /Wizard container -->
                 </div>
