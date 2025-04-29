@@ -85,7 +85,7 @@
                                                 href="{{route('privacy-policy')}}">Privacy Policy</a>, <a
                                                 href="{{route('terms-condition')}}">Terms &amp;
                                                 Conditions</a>, and <a
-                                                href="https://depolawsuitnow.com/CCPA">California Privacy Notice</a> and agree to receive email promotions from PLM, Michaels & Sterling
+                                                href="https://depolawsuitnow.com/depo-privacy-rights">California Privacy Notice</a> and agree to receive email promotions from PLM, Michaels & Sterling
                                             LLC and our marketing partners. I understand and agree that this site uses
                                             third-party visit recording technology, including, but not limited to,
                                             Trusted Form and Jornaya. I understand that my consent is not required to
@@ -172,7 +172,7 @@
                     </div>
                     <div class="col-lg-6 col-md-6" id="left_form" style="background-color: #6c757d;text-align: left">
                         <p>Depo has long been a trusted medication, but growing evidence links it to severe health
-                            risks, including [specific issues]. Many users were not properly warned about these dangers,
+                            risks, including bone density loss, hormonal imbalances, severe mood changes, and an increased risk of infertility.. Many users were not properly warned about these dangers,
                             leaving them vulnerable to unexpected complications.</p>
 
                         <p>If you or a loved one has experienced adverse side effects from Depo, it’s essential to
