@@ -97,6 +97,7 @@
 
 
     <!-- COMMON SCRIPTS -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script src="{{ asset('js/jquery-3.7.1.min.js') }}"></script>
     <script src="{{ asset('js/common_scripts.min.js') }}"></script>
     <script src="{{ asset('js/velocity.min.js') }}"></script>

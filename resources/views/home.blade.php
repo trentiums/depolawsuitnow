@@ -24,6 +24,11 @@
                             <div id="progressbar"></div>
                             <span id="location"></span>
                         </div>
+                        @if($errors->any())
+                        <div class="row alert-danger alert">
+                            {!! implode('', $errors->all('<div>:message</div>')) !!}
+                        </div>
+                        @endif
                         <!-- /top-wizard -->
                         <form method="post" action="{{ route('store-inquiry') }}" id="inquiry-form"
                               data-tf-element-role="offer">
@@ -98,8 +103,20 @@
                                     </div>
                                 </div>
                             </div>
+
+                            <div class="row mb-4">
+                                <div class="g-recaptcha" data-sitekey="{{ config('settings.captcha_site_key') }}" required>
+                                </div>
+                                <div><input type="hidden" name="hiddenRecaptcha" id="hiddenRecaptcha" required></div>
+
+                            </div>
+                            <div id="captchaMessage" style="color: red; display: none; margin-bottom: 20px;">
+                                Security Verification Pending...!
+                            </div>
                             <div class="row">
                                 <div class="col-md-6">
+                                    <input type="hidden" name="bot" value="bot">
+                                <input type="hidden" name="bot_capture" value="">
                                     <p><input type="submit" value="Submit" data-tf-element-role="submit"
                                               class="btn_1 add_bottom_15"
                                               id="submit-contact"></p>
@@ -307,4 +324,18 @@
     <noscript>
         <img src='https://api.trustedform.com/ns.gif'/>
     </noscript>
+    <script>
+        document.querySelector('form').addEventListener('submit', function(event) {
+            var recaptchaResponse = grecaptcha.getResponse();
+            var captchaMessage = document.getElementById('captchaMessage');
+
+            if (recaptchaResponse.length === 0) {
+                event.preventDefault();
+                captchaMessage.style.display = 'block'; // Show the error message
+            } else {
+                captchaMessage.style.display = 'none'; // Hide the message if CAPTCHA is complete
+                document.getElementById('hiddenRecaptcha').value = recaptchaResponse;
+            }
+        });
+    </script>
 @endsection
