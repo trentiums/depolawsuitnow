@@ -6,7 +6,10 @@ use App\Http\Requests\InquiryRequest;
 use Carbon\Carbon;
 use Google_Client;
 use Google_Service_Sheets;
-use Illuminate\Http\Request;
+use GuzzleHttp;
+use Log;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\RequestContactMail;
 
 class PageController extends Controller
 {
@@ -38,9 +41,63 @@ class PageController extends Controller
         return view('depo-privacy-rights');
     }
 
+    function getOriginalClientIp(Request $request = null): string
+    {
+        $request = $request ?? request();
+        $xForwardedFor = $request->header('x-forwarded-for');
+        if (empty($xForwardedFor)) {
+            // Si está vacío, tome la IP del request.
+            $ip = $request->ip();
+        } else {
+            // Si no, viene de API gateway y se transforma para usar.
+            $ips = is_array($xForwardedFor) ? $xForwardedFor : explode(', ', $xForwardedFor);
+            $ip = $ips[0];
+        }
+        return $ip;
+    }
+
     public function storeInquiry(InquiryRequest $request)
     {
-        $client = new Google_Client();
+
+        try {
+            $allRequest = $request->all();
+
+            if(!isset($allRequest['bot']) || !empty($allRequest['bot_capture'])){
+                return back()->with('error', 'Bot captured, wrong form data submit, please try again.');
+            }
+            if(isset($allRequest['bot']) && !empty($allRequest['bot'])){
+                if($allRequest['bot'] != "bot"){
+                    return back()->with('error', 'Bot captured, wrong form data submit, please try again.');
+                }
+            }
+
+            $requestApi = new GuzzleHttp\Client(["verify" => false]);
+
+            $request_param['fname'] = $request->first_name;
+            $request_param['lname'] = $request->last_name;
+            $request_param['phone'] = $request->phone;
+            $request_param['email'] = $request->email;
+            // $request_param['RideshareVictim'] = $request->rideshare_victim;
+            $request_param['IPAddress'] = $this->getOriginalClientIp();
+            $request_param['UsedDepoProvera'] = $request->used_depo_provera;
+            $request_param['t_id'] = $request->xxTrustedFormCertUrl;
+            $request_param['VendorLeadId'] = $request->xxTrustedFormToken;
+
+
+            $request_param['xxTrustedFormToken'] = $request->xxTrustedFormToken;
+            $request_param['xxTrustedFormCertUrl'] = $request->xxTrustedFormCertUrl;
+            $request_param['xxTrustedFormPingUrl'] = $request->xxTrustedFormPingUrl;
+
+            Mail::to(config('settings.to_email'))->send(new RequestContactMail($request_param));
+
+
+            return redirect()->route('thank-you')->with('success', 'Thank you for your time to fill this form, our representative will connect with you asap.');
+        } catch (\Exception $e) {
+            Log::error($e);
+            Log::error($request->all());
+            return back()->with('error', 'Something wen\'t wront, please try again. ');
+        }
+       /*  $client = new Google_Client();
         $client->setApplicationName('Google Sheets');
         $client->setHttpClient(new \GuzzleHttp\Client([
             'verify' => true,
@@ -88,7 +145,7 @@ class PageController extends Controller
             }
         } catch (\Exception $e) {
             return back()->with('error', 'Failed to add data to Google Sheets: ' . $e->getMessage());
-        }
+        } */
     }
 
     public function thankYou()

@@ -3,6 +3,8 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Support\Facades\Http;
+use Closure;
 
 class InquiryRequest extends FormRequest
 {
@@ -43,11 +45,40 @@ class InquiryRequest extends FormRequest
                 'nullable',
                 'string'
             ],
+
             'accept_terms' => [
                 'required',
                 'string',
                 'in:Yes,No'
-            ]
+            ],
+            'bot' => [
+                'required',
+                'string',
+                'in:bot'
+            ],
+            'bot_capture' => [
+                'nullable',
+            ],
+            'xxTrustedFormCertUrl' => [
+                'required'
+            ],
+            'xxTrustedFormToken' => [
+                'required'
+            ],
+            'xxTrustedFormPingUrl' => [
+                'required'
+            ],
+            'g-recaptcha-response' => [
+                'required',
+                function (string $attribute, mixed $value, Closure $fail) {
+                    $response = Http::withOptions([
+                        'verify' => true // Disable SSL certificate verification
+                    ])->post('https://www.google.com/recaptcha/api/siteverify', [
+                        'secret' => config('settings.captcha_secret_key'),
+                        'response' => $value,
+                    ]);
+                }
+            ],
         ];
     }
 }
