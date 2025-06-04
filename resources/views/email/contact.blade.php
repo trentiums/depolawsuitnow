@@ -330,7 +330,7 @@
                                                 <td align="center">
                                                     <table width="100%" align="center" cellspacing="0" cellpadding="10"
                                                            border="1" style="border-color: #ffffff">
-                                                      
+
                                                         <tr>
                                                             <th align="center">
                                                                 <div style="line-height: 24px;">
@@ -544,6 +544,220 @@
                                                                 </td>
                                                             @endif
                                                         </tr>
+
+                                                                @if(isset($mailData['utm_source']) && !empty($mailData['utm_source']))
+                                                        <tr>
+
+                                                                <th align="center">
+                                                                    <div style="line-height: 24px;">
+                                                                        <font face="Arial, Helvetica, sans-serif"
+                                                                              size="4" color="#57697e"
+                                                                              style="font-size: 16px;">
+                                                                <span
+                                                                    style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #57697e;">
+                                                               UTM Source
+                                                                </span>
+                                                                        </font>
+                                                                    </div>
+                                                                </th>
+
+                                                                <td align="center">
+                                                                    <div style="line-height: 24px;">
+                                                                        <font face="Arial, Helvetica, sans-serif"
+                                                                              size="4" color="#57697e"
+                                                                              style="font-size: 16px;">
+                                                                <span
+                                                                    style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #57697e;">
+                                                                    {{$mailData['utm_source']}}
+                                                                </span>
+                                                                        </font>
+                                                                    </div>
+                                                                </td>
+
+                                                        </tr>
+                                                        @endif
+
+                                                        @if(isset($mailData['utm_medium']) && !empty($mailData['utm_medium']))
+                                                        <tr>
+
+                                                                <th align="center">
+                                                                    <div style="line-height: 24px;">
+                                                                        <font face="Arial, Helvetica, sans-serif"
+                                                                              size="4" color="#57697e"
+                                                                              style="font-size: 16px;">
+                                                                <span
+                                                                    style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #57697e;">
+                                                               UTM Medium
+                                                                </span>
+                                                                        </font>
+                                                                    </div>
+                                                                </th>
+
+                                                                <td align="center">
+                                                                    <div style="line-height: 24px;">
+                                                                        <font face="Arial, Helvetica, sans-serif"
+                                                                              size="4" color="#57697e"
+                                                                              style="font-size: 16px;">
+                                                                <span
+                                                                    style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #57697e;">
+                                                                    {{$mailData['utm_medium']}}
+                                                                </span>
+                                                                        </font>
+                                                                    </div>
+                                                                </td>
+
+                                                        </tr>
+                                                        @endif
+
+                                                        @if(isset($mailData['utm_campaign']) && !empty($mailData['utm_campaign']))
+                                                        <tr>
+                                                                <th align="center">
+                                                                    <div style="line-height: 24px;">
+                                                                        <font face="Arial, Helvetica, sans-serif"
+                                                                              size="4" color="#57697e"
+                                                                              style="font-size: 16px;">
+                                                                <span
+                                                                    style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #57697e;">
+                                                               UTM Campaign
+                                                                </span>
+                                                                        </font>
+                                                                    </div>
+                                                                </th>
+
+                                                                <td align="center">
+                                                                    <div style="line-height: 24px;">
+                                                                        <font face="Arial, Helvetica, sans-serif"
+                                                                              size="4" color="#57697e"
+                                                                              style="font-size: 16px;">
+                                                                <span
+                                                                    style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #57697e;">
+                                                                    {{$mailData['utm_campaign']}}
+                                                                </span>
+                                                                        </font>
+                                                                    </div>
+                                                                </td>
+                                                        </tr>
+                                                        @endif
+
+                                                        @if(isset($mailData['utm_content']) && !empty($mailData['utm_content']))
+                                                        <tr>
+                                                                <th align="center">
+                                                                    <div style="line-height: 24px;">
+                                                                        <font face="Arial, Helvetica, sans-serif"
+                                                                              size="4" color="#57697e"
+                                                                              style="font-size: 16px;">
+                                                                <span
+                                                                    style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #57697e;">
+                                                               UTM Content
+                                                                </span>
+                                                                        </font>
+                                                                    </div>
+                                                                </th>
+
+                                                                <td align="center">
+                                                                    <div style="line-height: 24px;">
+                                                                        <font face="Arial, Helvetica, sans-serif"
+                                                                              size="4" color="#57697e"
+                                                                              style="font-size: 16px;">
+                                                                <span
+                                                                    style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #57697e;">
+                                                                    {{$mailData['utm_content']}}
+                                                                </span>
+                                                                        </font>
+                                                                    </div>
+                                                                </td>
+                                                        </tr>
+                                                        @endif
+
+                                                        @if(isset($mailData['utm_term']) && !empty($mailData['utm_term']))
+                                                        <tr>
+                                                                <th align="center">
+                                                                    <div style="line-height: 24px;">
+                                                                        <font face="Arial, Helvetica, sans-serif"
+                                                                              size="4" color="#57697e"
+                                                                              style="font-size: 16px;">
+                                                                <span
+                                                                    style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #57697e;">
+                                                               UTM Term
+                                                                </span>
+                                                                        </font>
+                                                                    </div>
+                                                                </th>
+
+                                                                <td align="center">
+                                                                    <div style="line-height: 24px;">
+                                                                        <font face="Arial, Helvetica, sans-serif"
+                                                                              size="4" color="#57697e"
+                                                                              style="font-size: 16px;">
+                                                                <span
+                                                                    style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #57697e;">
+                                                                    {{$mailData['utm_term']}}
+                                                                </span>
+                                                                        </font>
+                                                                    </div>
+                                                                </td>
+                                                        </tr>
+                                                        @endif
+
+                                                        @if(isset($mailData['fbclid']) && !empty($mailData['fbclid']))
+                                                        <tr>
+                                                                <th align="center">
+                                                                    <div style="line-height: 24px;">
+                                                                        <font face="Arial, Helvetica, sans-serif"
+                                                                              size="4" color="#57697e"
+                                                                              style="font-size: 16px;">
+                                                                <span
+                                                                    style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #57697e;">
+                                                                Facebook Click ID
+                                                                </span>
+                                                                        </font>
+                                                                    </div>
+                                                                </th>
+
+                                                                <td align="center">
+                                                                    <div style="line-height: 24px;">
+                                                                        <font face="Arial, Helvetica, sans-serif"
+                                                                              size="4" color="#57697e"
+                                                                              style="font-size: 16px;">
+                                                                <span
+                                                                    style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #57697e;">
+                                                                    {{$mailData['fbclid']}}
+                                                                </span>
+                                                                        </font>
+                                                                    </div>
+                                                                </td>
+                                                        </tr>
+                                                        @endif
+
+                                                        @if(isset($mailData['referer']) && !empty($mailData['referer']))
+                                                        <tr>
+                                                                <th align="center">
+                                                                    <div style="line-height: 24px;">
+                                                                        <font face="Arial, Helvetica, sans-serif"
+                                                                              size="4" color="#57697e"
+                                                                              style="font-size: 16px;">
+                                                                <span
+                                                                    style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #57697e;">
+                                                                Referer
+                                                                </span>
+                                                                        </font>
+                                                                    </div>
+                                                                </th>
+
+                                                                <td align="center">
+                                                                    <div style="line-height: 24px;">
+                                                                        <font face="Arial, Helvetica, sans-serif"
+                                                                              size="4" color="#57697e"
+                                                                              style="font-size: 16px;">
+                                                                <span
+                                                                    style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #57697e;">
+                                                                    {{$mailData['referer']}}
+                                                                </span>
+                                                                        </font>
+                                                                    </div>
+                                                                </td>
+                                                        </tr>
+                                                        @endif
                                                     </table>
                                                     <!-- padding -->
                                                 </td>

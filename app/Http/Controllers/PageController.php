@@ -73,6 +73,18 @@ class PageController extends Controller
 
             $requestApi = new GuzzleHttp\Client(["verify" => false]);
 
+            $utmData = [
+                'utm_source'   => $request->input('utm_source'),
+                'utm_medium'   => $request->input('utm_medium'),
+                'utm_campaign' => $request->input('utm_campaign'),
+                'utm_content'  => $request->input('utm_content'),
+                'utm_term'     => $request->input('utm_term'),
+                'fbclid'       => $request->input('fbclid'),
+                'referer'     => $request->input('referer'),
+            ];
+
+
+            Log::info('UTM Data:', $utmData);
             $request_param['fname'] = $request->first_name;
             $request_param['lname'] = $request->last_name;
             $request_param['phone'] = $request->phone;
@@ -87,6 +99,29 @@ class PageController extends Controller
             $request_param['xxTrustedFormToken'] = $request->xxTrustedFormToken;
             $request_param['xxTrustedFormCertUrl'] = $request->xxTrustedFormCertUrl;
             $request_param['xxTrustedFormPingUrl'] = $request->xxTrustedFormPingUrl;
+
+            $request_param['utm_source'] = $utmData['utm_source'];
+            $request_param['utm_medium'] = $utmData['utm_medium'];
+            $request_param['utm_campaign'] = $utmData['utm_campaign'];
+            $request_param['utm_content'] = $utmData['utm_content'];
+            $request_param['utm_term'] = $utmData['utm_term'];
+            $request_param['fbclid'] = $utmData['fbclid'];
+            $request_param['referer'] = $utmData['referer'];
+
+            $requestApi = new \GuzzleHttp\Client(['verify' => true]);
+            $response = $requestApi->post('https://services.leadconnectorhq.com/hooks/iBHTQkawteG105yYtADm/webhook-trigger/f589832a-dbb6-408a-a5a5-87c5e9874e19', [
+                'headers' => [
+                    'Content-Type' => 'application/json',
+                    'Accept' => 'application/json',
+                ],
+                'json' => $request_param,
+            ]);
+
+            $body = $response->getBody()->getContents();
+            Log::info('Webhook Response:', ['response' => json_decode($body, true)]);
+            Log::info('Request Payload JSON:', [
+                'payload' => json_encode($request_param)
+            ]);
 
             Mail::to(config('settings.to_email'))->send(new RequestContactMail($request_param));
 
