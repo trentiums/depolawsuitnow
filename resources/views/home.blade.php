@@ -115,6 +115,13 @@
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
+                                    <input type="hidden" name="utm_source" value="{{ request()->get('utm_source', '') }}">
+                                <input type="hidden" name="utm_medium" value="{{ request()->get('utm_medium', '') }}">
+                                <input type="hidden" name="utm_campaign" value="{{ request()->get('utm_campaign', '') }}">
+                                <input type="hidden" name="utm_content" value="{{ request()->get('utm_content', '') }}">
+                                <input type="hidden" name="utm_term" value="{{ request()->get('utm_term', '') }}">
+                                <input type="hidden" name="fbclid" value="{{ request()->get('fbclid', '') }}">
+                                <input type="hidden" name="referer" value="{{ request()->headers->get('referer', '') }}">
                                     <input type="hidden" name="bot" value="bot">
                                 <input type="hidden" name="bot_capture" value="">
                                     <p><input type="submit" value="Submit" data-tf-element-role="submit"
