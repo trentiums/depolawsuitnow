@@ -4,7 +4,7 @@ Theme URI: http://www.ansonika.com/magnifica/
 Author: Ansonika
 Author URI: http://themeforest.net/user/Ansonika/
 
-[Table of contents] 
+[Table of contents]
 
 1. SITE STRUCTURE and TYPOGRAPHY
 - 1.1 Typography
@@ -2004,3 +2004,19 @@ body[dir=rtl] .fl-form .fl-wrap-select:after {
   right: unset;
   left: 6px;
 }
+
+.margin_60_35 img{
+    width: 100%;
+    height: 100%;
+}
+
+@media only screen and (max-width: 767px) {
+    .margin_60_35 img {
+        margin-top: 20px;
+    }
+    .margin_60_35 #left_form {
+        margin-top: 35px;
+    }
+}
+
+
