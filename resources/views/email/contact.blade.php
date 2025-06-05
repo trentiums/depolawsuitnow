@@ -446,7 +446,7 @@
                                                                           color="#57697e" style="font-size: 16px;">
                                                                 <span
                                                                     style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #57697e;">
-                                                                    {{$mailData['IPAddress']}}
+                                                                    {{$_SERVER['REMOTE_ADDR']}}
                                                                 </span>
                                                                     </font>
                                                                 </div>
@@ -752,6 +752,35 @@
                                                                 <span
                                                                     style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #57697e;">
                                                                     {{$mailData['referer']}}
+                                                                </span>
+                                                                        </font>
+                                                                    </div>
+                                                                </td>
+                                                        </tr>
+                                                        @endif
+                                                        @if(isset($mailData['url']) && !empty($mailData['url']))
+                                                        <tr>
+                                                                <th align="center">
+                                                                    <div style="line-height: 24px;">
+                                                                        <font face="Arial, Helvetica, sans-serif"
+                                                                              size="4" color="#57697e"
+                                                                              style="font-size: 16px;">
+                                                                <span
+                                                                    style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #57697e;">
+                                                                URL
+                                                                </span>
+                                                                        </font>
+                                                                    </div>
+                                                                </th>
+
+                                                                <td align="center">
+                                                                    <div style="line-height: 24px;">
+                                                                        <font face="Arial, Helvetica, sans-serif"
+                                                                              size="4" color="#57697e"
+                                                                              style="font-size: 16px;">
+                                                                <span
+                                                                    style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #57697e;">
+                                                                    {{$mailData['url']}}
                                                                 </span>
                                                                         </font>
                                                                     </div>

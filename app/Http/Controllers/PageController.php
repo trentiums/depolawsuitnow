@@ -90,7 +90,7 @@ class PageController extends Controller
             $request_param['phone'] = $request->phone;
             $request_param['email'] = $request->email;
             // $request_param['RideshareVictim'] = $request->rideshare_victim;
-            $request_param['IPAddress'] = $this->getOriginalClientIp();
+            // $request_param['IPAddress'] = $this->getOriginalClientIp();
             $request_param['UsedDepoProvera'] = $request->used_depo_provera;
             $request_param['t_id'] = $request->xxTrustedFormCertUrl;
             $request_param['VendorLeadId'] = $request->xxTrustedFormToken;
@@ -107,6 +107,7 @@ class PageController extends Controller
             $request_param['utm_term'] = $utmData['utm_term'];
             $request_param['fbclid'] = $utmData['fbclid'];
             $request_param['referer'] = $utmData['referer'];
+            $request_param['url'] = 'https://depolawsuitnow.com/';
 
             $requestApi = new \GuzzleHttp\Client(['verify' => true]);
             $response = $requestApi->post('https://services.leadconnectorhq.com/hooks/iBHTQkawteG105yYtADm/webhook-trigger/f589832a-dbb6-408a-a5a5-87c5e9874e19', [
