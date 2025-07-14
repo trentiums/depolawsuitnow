@@ -135,6 +135,7 @@ class PageController extends Controller
             Log::info('CRM Lead Payload:', [
                 'payload' => json_encode($leadPayload)
             ]);
+            if (!empty($utmData['utm_source']) && strtolower($utmData['utm_source']) === 'facebook') {
             $crmResponse = $requestApi->post('https://crm.legalactionhelp.com/api/v1/add-lead', [
                 'headers' => [
                     'Content-Type'  => 'application/json',
@@ -145,6 +146,9 @@ class PageController extends Controller
 
             $crmBody = $crmResponse->getBody()->getContents();
             Log::info('CRM Lead Response:', ['response' => json_decode($crmBody, true)]);
+            } else {
+                Log::info('CRM lead not sent: Not a Facebook UTM.');
+            }
             Mail::to(config('settings.to_email'))->send(new RequestContactMail($request_param));
 
 
