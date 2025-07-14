@@ -71,7 +71,7 @@ class PageController extends Controller
                 }
             }
 
-            $requestApi = new GuzzleHttp\Client(["verify" => false]);
+            $requestApi = new GuzzleHttp\Client(["verify" => true]);
 
             $utmData = [
                 'utm_source'   => $request->input('utm_source'),
@@ -124,6 +124,27 @@ class PageController extends Controller
                 'payload' => json_encode($request_param)
             ]);
 
+            $leadPayload = [
+                'first_name'      => $request->first_name,
+                'last_name'       => $request->last_name,
+                'phone'           => $request->phone,
+                'email'           => $request->email,
+                'lawsuit'         => 22,
+                'trusted_form_url' => $request->xxTrustedFormCertUrl,
+            ];
+            Log::info('CRM Lead Payload:', [
+                'payload' => json_encode($leadPayload)
+            ]);
+            $crmResponse = $requestApi->post('https://crm.legalactionhelp.com/api/v1/add-lead', [
+                'headers' => [
+                    'Content-Type'  => 'application/json',
+                    'Authorization' => 'Bearer ' . config('settings.crm_api_token'),
+                ],
+                'json' => $leadPayload,
+            ]);
+
+            $crmBody = $crmResponse->getBody()->getContents();
+            Log::info('CRM Lead Response:', ['response' => json_decode($crmBody, true)]);
             Mail::to(config('settings.to_email'))->send(new RequestContactMail($request_param));
 
 
