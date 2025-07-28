@@ -135,7 +135,7 @@ class PageController extends Controller
             Log::info('CRM Lead Payload:', [
                 'payload' => json_encode($leadPayload)
             ]);
-            if (!empty($utmData['utm_source']) && strtolower($utmData['utm_source']) === 'facebook') {
+            if (!empty($utmData['utm_source']) && strtolower($utmData['utm_source']) == 'fb_ad' || !empty($utmData['fbclid'])) {
             $crmResponse = $requestApi->post('https://crm.legalactionhelp.com/api/v1/add-lead', [
                 'headers' => [
                     'Content-Type'  => 'application/json',
