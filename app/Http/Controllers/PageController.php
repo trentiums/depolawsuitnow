@@ -131,7 +131,7 @@ class PageController extends Controller
                 'phone'           => $request->phone,
                 'email'           => $request->email,
                 'lawsuit'         => 22,
-                'diagnosed_meningioma'   => strtolower($request->diagnosed_meningioma) === 'yes' ? 589 : 590,
+                'depo_exposure'   => strtolower($request->diagnosed_meningioma) === 'yes' ? 589 : 590,
                 'trusted_form_url' => $request->xxTrustedFormCertUrl,
             ];
             Log::info('CRM Lead Payload:', [

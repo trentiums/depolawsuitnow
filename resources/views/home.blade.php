@@ -74,7 +74,7 @@
                             <div class="row">
                                 <div class="col-md-12 col-sm-12">
                                     <div class="form-group">
-                                        <label>Were you ever diagnosed with Meningioma of Brain Tumor? <span
+                                        <label>Were you ever diagnosed with Meningioma or Brain Tumor? <span
                                                 style="color:red">*</span></label><br>
                                         <div class="form-check form-check-inline">
                                             <input class="form-check-input" type="radio" name="diagnosed_meningioma"

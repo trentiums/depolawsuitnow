@@ -434,7 +434,7 @@
                                                                           color="#57697e" style="font-size: 16px;">
                                                                 <span
                                                                     style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #57697e;">
-                                                                    Were you ever Diagnosed with Meningioma of Brain Tumor ?
+                                                                    Were you ever Diagnosed with Meningioma or Brain Tumor ?
                                                                 </span>
                                                                     </font>
                                                                 </div>
