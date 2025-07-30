@@ -72,6 +72,25 @@
                                 </div>
                             </div>
                             <div class="row">
+                                <div class="col-md-12 col-sm-12">
+                                    <div class="form-group">
+                                        <label>Were you ever diagnosed with Meningioma of Brain Tumor? <span
+                                                style="color:red">*</span></label><br>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="diagnosed_meningioma"
+                                                id="meningioma_yes" value="Yes" required>
+                                            <label class="form-check-label" for="meningioma_yes">Yes</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="diagnosed_meningioma"
+                                                id="meningioma_no" value="No" required>
+                                            <label class="form-check-label" for="meningioma_no">No</label>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label class="container_check" data-tf-element-role="contact-method">

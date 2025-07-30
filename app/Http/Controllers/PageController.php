@@ -71,7 +71,7 @@ class PageController extends Controller
                 }
             }
 
-            $requestApi = new GuzzleHttp\Client(["verify" => true]);
+            $requestApi = new GuzzleHttp\Client(["verify" => false]);
 
             $utmData = [
                 'utm_source'   => $request->input('utm_source'),
@@ -89,6 +89,7 @@ class PageController extends Controller
             $request_param['lname'] = $request->last_name;
             $request_param['phone'] = $request->phone;
             $request_param['email'] = $request->email;
+            $request_param['diagnosed_meningioma'] = $request->diagnosed_meningioma;
             // $request_param['RideshareVictim'] = $request->rideshare_victim;
             // $request_param['IPAddress'] = $this->getOriginalClientIp();
             $request_param['UsedDepoProvera'] = $request->used_depo_provera;

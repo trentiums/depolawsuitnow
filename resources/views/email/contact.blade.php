@@ -427,6 +427,30 @@
                                                                 </div>
                                                             </td>
                                                         </tr>
+                                                        <tr>
+                                                            <th align="center">
+                                                                <div style="line-height: 24px;">
+                                                                    <font face="Arial, Helvetica, sans-serif" size="4"
+                                                                          color="#57697e" style="font-size: 16px;">
+                                                                <span
+                                                                    style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #57697e;">
+                                                                    Were you ever Diagnosed with Meningioma of Brain Tumor ?
+                                                                </span>
+                                                                    </font>
+                                                                </div>
+                                                            </th>
+                                                            <td align="center">
+                                                                <div style="line-height: 24px;">
+                                                                    <font face="Arial, Helvetica, sans-serif" size="4"
+                                                                          color="#57697e" style="font-size: 16px;">
+                                                                <span
+                                                                    style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #57697e;">
+                                                                    {{$mailData['diagnosed_meningioma']}}
+                                                                </span>
+                                                                    </font>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
 
                                                         <tr>
                                                             <th align="center">
