@@ -111,7 +111,7 @@ class PageController extends Controller
             $request_param['url'] = 'https://depolawsuitnow.com/';
 
             $requestApi = new \GuzzleHttp\Client(['verify' => true]);
-            $response = $requestApi->post('https://services.leadconnectorhq.com/hooks/iBHTQkawteG105yYtADm/webhook-trigger/f589832a-dbb6-408a-a5a5-87c5e9874e19', [
+            /* $response = $requestApi->post('https://services.leadconnectorhq.com/hooks/iBHTQkawteG105yYtADm/webhook-trigger/f589832a-dbb6-408a-a5a5-87c5e9874e19', [
                 'headers' => [
                     'Content-Type' => 'application/json',
                     'Accept' => 'application/json',
@@ -120,7 +120,7 @@ class PageController extends Controller
             ]);
 
             $body = $response->getBody()->getContents();
-            Log::info('Webhook Response:', ['response' => json_decode($body, true)]);
+            Log::info('Webhook Response:', ['response' => json_decode($body, true)]); */
             Log::info('Request Payload JSON:', [
                 'payload' => json_encode($request_param)
             ]);
