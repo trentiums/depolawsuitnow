@@ -94,27 +94,32 @@
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label class="container_check" data-tf-element-role="contact-method">
-                                            By checking this box and clicking “SUBMIT CLAIM REVIEW” I represent that I
-                                            am the line subscriber or primary user of the phone number above (including
-                                            my wireless number if provided) and provide my express consent authorizing
-                                            PLM, Michaels & Sterling, Prime Marketing Source and our marketing partners to contact me by
-                                            telephone (including text messages), delivered via automated technology to
-                                            the phone number above regarding legal products and/or offerings even if I
-                                            am on a Federal, State or Do-Not-Call registry. I understand that these
-                                            calls/texts may be delivered via automated technology, at any time in any
-                                            way, including but not limited to telemarketing calls using an auto-dialer,
-                                            text, fax, or email, even if these result in charges by my carrier. I
-                                            further represent that I am a U.S. Resident over the age of 18, understand
-                                            and agree to the <a
-                                                href="{{route('privacy-policy')}}">Privacy Policy</a>, <a
-                                                href="{{route('terms-condition')}}">Terms &amp;
-                                                Conditions</a>, and <a
-                                                href="https://depolawsuitnow.com/depo-privacy-rights">California Privacy Notice</a> and agree to receive email promotions from PLM, Michaels & Sterling
-                                            LLC and our marketing partners. I understand and agree that this site uses
-                                            third-party visit recording technology, including, but not limited to,
-                                            Trusted Form and Jornaya. I understand that my consent is not required to
-                                            continue with my application or is a condition to search for legal products
-                                            and/offerings. I understand I can revoke consent at any time.
+                                            By checking this box and clicking "SUBMIT CLAIM REVIEW" I represent that I am
+                                            the line subscriber or primary user of the phone number above (including my
+                                            wireless number if provided) and provide my express consent authorizing MS
+                                            Consulting LLC & <a href="{{route('home')}}"
+                                                target="_blank">www.depolawsuitnow.com</a> to contact me by telephone
+                                            (including text messages), delivered via automated technology to the phone
+                                            number above regarding legal products and/or offerings even if I am on a
+                                            Federal, State or Do-Not-Call registry. I understand that these calls/texts may
+                                            be delivered via automated technology, at any time in any way, including but not
+                                            limited to telemarketing calls using an auto-dialer, text, fax, or email, even
+                                            if these result in charges by my carrier. I further represent that I am a U.S.
+                                            Resident over the age of 18, understand and agree to the <a
+                                                href="{{ route('privacy-policy') }}" target="_blank">Privacy Policy</a>,
+                                            <a href="{{ route('terms-condition') }}" target="_blank">Terms &
+                                                Conditions</a>, and <a href="{{ route('depo-privacy-rights') }}"
+                                                target="_blank">California Privacy Notice</a> and agree to receive
+                                            email promotions from MS Consulting LLC,
+                                            <a href="{{route('home')}}"
+                                                target="_blank">www.depolawsuitnow.com</a> and our marketing partners. I
+                                            understand and agree that this site uses third-party visit recording technology,
+                                            including, but not limited to, Trusted Form and Jornaya. I understand that my
+                                            consent is not required to continue with my application or is a condition to
+                                            search for legal products and/offerings. I understand I can revoke consent at
+                                            any time. Feel free to review our <a href="{{ route('terms-condition') }}"
+                                                target="_blank">terms & conditions</a> and <a
+                                                href="{{ route('privacy-policy') }}" target="_blank">privacy policy</a>.
                                             <input type="checkbox" name="accept_terms" value="Yes"
                                                    data-tf-element-role="consent-opt-in" required>
                                             <span class="checkmark"></span>
